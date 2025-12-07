@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+   body{
+       font: normal 18pt Aria;
+       width: 500px;
+      /* border: 1px solid black;*/
+   }
+   input{
+       font: normal 18pt Aria
+       width: 100px;
+   }
+   div#resultado {
+       margin-top: 20px;
+   }
+   .botao {
+       background:  black;
+       color: white;
+   }
+</style>
+</head>
+<body>
+    <h1>Nacionalidades</h1>
+    <form action=" ">
+    <label for="txt1">Que país você nasceu?
+    <input type="text" name="txt1" id="txt1">
+    <input type="button" value="Verificar " class="botao"  onclick="nacionalidades()">
+    </form>
+    <div id="res">
+    </div>
+    <script>
+        function nacionalidades(){
+            var input = window.document.getElementById('txt1')
+            var texto = input.value;
+            var res = window.document.getElementById('res')
+            if(texto == 'Brasil'){
+                res.innerHTML= `<p>Você é Brasileiro!</p>`
+            }else{
+                res.innerHTML= `<p>Você é Estrangeiro!`
+            }
+
+        }
+    
+    </script>
+    
+</body>
+</html>
